@@ -111,10 +111,10 @@ a { color: inherit; }
 
 #Sub_title {
     font-family: Papyrus, fantasy;
-    width: 124px;
+    width: 200px;
     position: relative;
     left: 250px;
-    top: -150px;
+    top: -153px;
 }
 p {
     font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
