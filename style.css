@@ -1,15 +1,121 @@
+body {
+    background-image: url("http://www.oftmedia.co.za/wp-content/uploads/2012/03/website_background.jpg")
+}
+
 #container {
     position: relative;
-    width: 800px;
-    height: 650px;
+    width: 750px;
+    height: 700px;
     background-color: black;
+    border-radius: 5px;
     margin:0 auto;
 }
 
 #menu {
     position: relative;
-    width: 800px;
-    height: 20px;
-    background-color: black;
-    border: 1px solid gray;
+    width: 746px;
+    height: 30px;
+    top: -40px;
+    border: 2px solid #B7B7B7;
+    background-color: #14111F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: white;
+}
+
+#Title{
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    text-align: center;
+    font-size: 60px;
+}
+
+#Home {
+    position: relative;
+    top: -19px;
+    left: 5px;
+    width: 0px;
+}
+
+#Contact {
+    position: relative;
+    top: -67px;
+    left: 325px;
+    width: 0px;
+}
+
+#Homework {
+    position: relative;
+    top: -115px;
+    left: 630px;
+    width: 0px;
+}
+
+a { color: inherit; }
+
+#Picture_1 {
+    position: relative;
+    width: 250px;
+    height: 113px;
+    background-image: url(Bilder/bild1.jpg);
+    border: 2px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+#Picture_2 {
+    position: relative;
+    width: 240px;
+    height: 113px;
+    left: 257px;
+    top: -117px;
+    background-image: url(Bilder/bild2.jpg);
+    border: 2px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+#Picture_3 {
+    position:relative;
+    width: 240px;
+    height: 113px;
+    left: 504px;
+    top: -234px;
+    background-image: url(Bilder/bild3.jpg);
+    border: 2px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+#Picture {
+    background-image: url("http://www.uniquehdwallpapers.com/wp-content/uploads/2012/10/123893-2560x1600-1024x640.jpg");
+    position: relative;
+    top:20
+}
+
+#Text_Box_1 {
+    position: relative;
+    top: -180px;
+    left: 243px;
+    width: 500px;
+    height: 300px;
+    border: 2px solid #B7B7B7;
+    border-radius: 5px;
+    background-color: #CAFFF5;
+    overflow-y: scroll;
+    
+}
+
+.aboutme_text {
+    position: relative;
+    top: -10px;
+    left: 3px;
+}
+
+#Sub_title {
+    font-family: Papyrus, fantasy;
+    width: 124px;
+    position: relative;
+    left: 250px;
+    top: -150px;
+}
+p {
+    font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
 }
