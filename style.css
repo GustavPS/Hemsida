@@ -1,0 +1,15 @@
+#container {
+    position: relative;
+    width: 800px;
+    height: 650px;
+    background-color: black;
+    margin:0 auto;
+}
+
+#menu {
+    position: relative;
+    width: 800px;
+    height: 20px;
+    background-color: black;
+    border: 1px solid gray;
+}
