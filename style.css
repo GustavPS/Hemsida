@@ -1,5 +1,5 @@
 body {
-    background-image: url("http://www.oftmedia.co.za/wp-content/uploads/2012/03/website_background.jpg")
+    background-image: url("http://www.oftmedia.co.za/wp-content/uploads/2012/03/website_background.jpg");
 }
 
 #container {
@@ -92,13 +92,13 @@ a { color: inherit; }
 
 #Text_Box_1 {
     position: relative;
-    top: -180px;
-    left: 243px;
+    top: -580px;
+    left: 240px;
     width: 500px;
     height: 300px;
-    border: 2px solid #B7B7B7;
+    border: 1px solid #B7B7B7;
     border-radius: 5px;
-    background-color: #CAFFF5;
+    background-color: #14111F;
     overflow-y: scroll;
     
 }
@@ -107,6 +107,7 @@ a { color: inherit; }
     position: relative;
     top: -10px;
     left: 3px;
+    color: #69AFAF;
 }
 
 #Sub_title {
@@ -114,27 +115,28 @@ a { color: inherit; }
     width: 200px;
     position: relative;
     left: 250px;
-    top: -153px;
+    top: -550px;
 }
 p {
     font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+    color: #AAAAAA;
 }
 
 #menu_2 {
     position: relative;
-    top: -563px;
+    top: -203px;
     left: 40px;
     width: 130px;
     height: 300px;
-    background-color: #CAFFF5;
+    background-color: #14111F;
     border-radius: 5px;
-    border: 2px solid #B7B7B7;
+    border: 1px solid #B7B7B7;
 }
 
 #menu_2_1 {
     font-family: Papyrus, fantasy;
     position: relative;
-    top: -534px;
+    top: -173px;
     left: 50px;
 }
 
@@ -180,4 +182,68 @@ p {
 .link {
     position:relative;
     top: -200px;
+}
+
+.Homework_1 {
+    position: relative;
+    top: -190px;
+    width: 745px;
+    height: 30px;
+    border: 1px solid #B7B7B7;
+    border-radius: 2px;
+    background-color: #14111F;
+}
+
+.Homework1 {
+    position: relative;
+    top: -15px;
+    left: -368px;
+    width: 0px;
+}
+
+.Homework2 {
+    position: relative;
+    top: -54px;
+    width: 0px;
+    left: -30px;
+}
+
+.Homework3 {
+    position: relative;
+    top: -95px;
+    left: 333px;
+    width: 0px;
+}
+
+#javascript {
+    position: relative;
+    top: 80px;
+    width: 500px;
+    height: 67px;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px;
+    background-color: #14111F;
+}
+
+.loggain {
+    position: relative;
+    top: -250px;
+}
+
+#jsbutton {
+    color: #14111F;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+h3:hover {
+    color: gray;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#tab1 {
+ height: 0px;
 }

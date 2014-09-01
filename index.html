@@ -3,9 +3,27 @@
     <head>
     <link rel="stylesheet" href="style.css" />
     <title>Vezel HF™</title>
+        
+        <script>
+        function hide() {
+            
+            document.getElementById("tab1").style.display = 'none';
+            document.getElementById("tab2").style.display = 'none';
+            document.getElementById("tab3").style.display = 'none';
+            document.getElementById("tab4").style.display = 'none';
+            
+        } function show(h1) {
+            hide();
+            document.getElementById(h1).style.display = 'block';
+        }
+        </script>
+        
+        
+        
     </head>
-    <div id="container">
-    <body>
+    <div id="box">
+    <body onload="hide();show('tab1');">
+        <div id="container">
         <div id="Picture">
             <h1 id="Title">Vezel</h1>
         </div>
@@ -18,22 +36,41 @@
         <div id="Picture_1"></div>
         <div id="Picture_2"></div>
         <div id="Picture_3"></div>
-        
-        <h2 id="Sub_title">About Me:</h2>
-        <div id= "Text_Box_1">
-            <p class="aboutme_text">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text              Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text                  Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
-        </div>
+
         <h2 id="menu_2_1">Menu</h2>
         <div id="menu_2">
             <center>
-                <div class="Tab_1"><a href="index_tab1.html"><h3 class="text_1">Tab 1</h3></a></div>
-                <div class="Tab_2"><a href="index_tab2.html"><h3 class="text_2">Tab 2</h3></a></div>
-                <div class="Tab_3"><a href="index_tab3.html"><h3 class="text_3">Tab 3</h3></a></div>
-                <div class="Tab_4"><a href="index_tab4.html"><h3 class="text_4">Tab 4</h3></a></div>
-                <div class="Tab_5"><a href="index_tab5.html"><h3 class="text_5">Tab 5</h3></a></div>
+                <div class="Tab_1"><h3 onclick="show('tab1')">Tab 1</h3></div>
+                <div class="Tab_2"><h3 onclick="show('tab2')">Tab 2</h3></div>
+                <div class="Tab_3"><h3 onclick="show('tab3')">Tab 3</h3></div>
+                <div class="Tab_4"><h3 onclick="show('tab4')">Tab 4</h3></div>
             </center>
         </div>
-    
+            <div id="tab1">
+                <h2 id="Sub_title">About Me:</h2>
+                    <div id="Text_Box_1">
+                        
+                    </div>
+            </div>
+            <div id="tab2">
+                <h2 id="Sub_title">Tab 2:</h2>
+                <div id="Text_Box_1">
+                    
+                </div>
+            </div>
+            <div id="tab3">
+                <h2 id="Sub_title">Tab 3:</h2>
+                <div id="Text_Box_1">
+                
+                </div>
+            </div>
+            <div id="tab4">
+                <h2 id="Sub_title">Tab 4:</h2>
+                <div id="Text_Box_1">
+                
+                </div>
+            </div>
+        </div>
     </body>
     </div>
 </html>
