@@ -87,7 +87,9 @@ a { color: inherit; }
 #Picture {
     background-image: url("http://www.uniquehdwallpapers.com/wp-content/uploads/2012/10/123893-2560x1600-1024x640.jpg");
     position: relative;
-    top:20
+    top:20;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #Text_Box_1 {
@@ -245,5 +247,11 @@ h3:hover {
 }
 
 #tab1 {
- height: 0px;
+    position: relative;
+    top: 185px;
+    height: 0px;
+}
+
+#tab2, #tab3, #tab4 {
+    height: 0px;
 }
