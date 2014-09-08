@@ -4,14 +4,15 @@
     
     </head>
     <body style="background-color: black;" onkeydown="keyHandler(event);">
-        <embed src="Polka.mp3" autostart="true" loop="true"
-               width="2" height="0">
+        <embed src="Polka.mp3" autostart="true" loop="true" width="2" height="0">
         </embed>
         <noembed>
             <bgsound src="Polka.mp3" loop="infinite">
         </noembed>
+            
         <div id="score" style="position:relative; top: 383px;" align="right"></div>
         <div id="scoreWS" style="position:relative; left: 10px; top: 318px;"></div>
+            
         <center>
         <h1 style="color: white; font-family: Brush Script MT, cursive; font-size: 50px; position:relative; top: -150px;">Ping Pong</h1>
         <canvas style="cursor: none; border: 1px solid black; position:relative; top: -150px; background-color: white;" id="duk" width="500" height="400" onmousemove="mouseHandler(event)"></canvas>
@@ -37,7 +38,6 @@
             document.getElementById('scoreWS').innerHTML = pointWS;
             
             var hard = prompt("Svårighetsgrad 1-20   1 = Svårast 20 = Lättast");
-
             
             if(hard < 21) {
             function paintMan(x, y) {
@@ -68,17 +68,15 @@
                 }
             }    
             function repaint() {
-                // Sudda gubbe
+                // Sudda allt
                 ctx.clearRect(0, 0, 500, 400);
-                // Måla gubbe
+                // Måla allt
                 paintMan(xMan, yMan);
                 
                 Pong(yMouse - 200);
-                
-                
                 Pong2(xpong);
                 
-                // Flytta gubbe
+                // Flytta boll
                 xMan = xMan + vxMan;
                 yMan = yMan + vyMan;
                 
@@ -149,15 +147,13 @@
             } else {
                 hard = prompt("Skriv ett nummer mellan 1 och 20")
             }
-            // Kallar på repaint 50 ggr i sekunden
+            // Kallar på funktionen repaint X ggr i sekunden   X = Variabeln "hard".
             window.setInterval(repaint, hard);
-                
-
+            
         </script>
             
             <a style="text-decoration: none; font-family: Brush Script MT, cursive; font-size: 30px; position:relative; top: -130px;" href="homework.html"><h1 style="color: white;">Go back</h1></a>
+            
         </center>
-        
-        
     </body>
 </html>
