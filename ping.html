@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body style="background-color: black;" onkeydown="keyHandler(event);">
+        <div id="score" style="position:relative; top: 383px;" align="right"></div>
+        <div id="scoreWS" style="position:relative; left: 10px; top: 318px;"></div>
+        <center>
+        <h1 style="color: white; font-family: Brush Script MT, cursive; font-size: 50px; position:relative; top: -150px;">Ping Pong</h1>
+        <canvas style="cursor: none; border: 1px solid black; position:relative; top: -150px; background-color: white;" id="duk" width="500" height="400" onmousemove="mouseHandler(event)"></canvas>
+        <script>
+            var c = document.getElementById("duk");
+            var ctx = c.getContext("2d");
+            var xMan = 100, yMan = 200, vxMan = 2, vyMan = 3;
+            var yMouse = 0;
+            var point = 0, pointWS = 0;
+            var xpong = 200;
+            var yKey;
+            
+            // Poäng till var "point" / div "score"  (Färger, font osv.)
+            document.getElementById('score').style.fontSize = "50px";
+            document.getElementById('score').style.fontFamily = "Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;";
+            document.getElementById('score').style.color = "white";
+            document.getElementById('score').innerHTML = point;
+            
+            // Poäng till var "pointWS" / div "scoreWS"  (Färger, font osv.)
+            document.getElementById('scoreWS').style.fontSize = "50px";
+            document.getElementById('scoreWS').style.fontFamily = "Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;";
+            document.getElementById('scoreWS').style.color = "white";
+            document.getElementById('scoreWS').innerHTML = pointWS;
+            
+            var hard = prompt("Svårighetsgrad 1-20   1 = Svårast 20 = Lättast");
+
+            
+            if(hard < 21) {
+            function paintMan(x, y) {
+                // Huvud
+                ctx.beginPath();
+                ctx.arc(x, y, 10, 0, 2*Math.PI);
+                ctx.fill();
+            } function Pong(y) {
+                // Pong 1
+                ctx.beginPath;
+                ctx.fillRect(390, y, 10, 100);
+                // Pong 2
+            } function Pong2(y) {
+                ctx.beginPath;
+                ctx.fillRect(25, y, 10, 100);
+            }
+            // Mus
+            function mouseHandler(event) {
+                yMouse = event.clientY;
+            }
+            // Keyboard
+            function keyHandler(event) {
+                yKey = event.keyCode;
+                if (yKey == 87) {
+                    xpong = xpong - 40;
+                } else if (yKey == 83) {
+                    xpong = xpong + 40;
+                }
+            }    
+            function repaint() {
+                // Sudda gubbe
+                ctx.clearRect(0, 0, 500, 400);
+                // Måla gubbe
+                paintMan(xMan, yMan);
+                
+                Pong(yMouse - 200);
+                
+                
+                Pong2(xpong);
+                
+                // Flytta gubbe
+                xMan = xMan + vxMan;
+                yMan = yMan + vyMan;
+                
+                if(yMan + 10 > 400){
+                    vyMan = vyMan - vyMan - vyMan;
+                }
+                if(yMan - 10 < 0){
+                    vyMan = vyMan - vyMan - vyMan;
+                }
+                // När den studsar till höger
+                if(xMan == 380 && yMan > yMouse  -210 && yMan < yMouse - 110) {
+                    vxMan = vxMan - vxMan - vxMan;
+                    point = point + 1;
+                    
+                    if(point > 9) {
+                        document.getElementById('score').style.color = "red";
+                        document.getElementById('score').innerHTML = point;
+                    } else if(point > 19) {
+                        document.getElementById('score').style.color = "gold";
+                        document.getElementById('score').innerHTML = point;
+                    } else {
+                        document.getElementById('score').style.color = "white";
+                        document.getElementById('score').innerHTML = point;
+                    }
+                // När den studsar till vänster
+                } else if( xMan == 40 && yMan > xpong && yMan < xpong + 100) {
+                    vxMan = vxMan - vxMan - vxMan;
+                    pointWS = pointWS + 1;
+                    
+                    if(pointWS > 9) {
+                        document.getElementById('scoreWS').style.color = "red";
+                        document.getElementById('scoreWS').innerHTML = pointWS;
+                    } else if(pointWS > 19) {
+                        document.getElementById('score').style.color = "gold";
+                        document.getElementById('score').innerHTML = pointWS;
+                    } else {
+                        document.getElementById('scoreWS').style.color = "white";
+                        document.getElementById('scoreWS').innerHTML = pointWS;
+                    }
+                }
+                // Om den åker för långt åt höger
+                if(xMan > 500) {
+                    xMan = 100;
+                    if(point < 1) {
+                        point = point - 1;
+                        document.getElementById('score').style.color = "white";
+                        document.getElementById('score').innerHTML = point;
+                    } else {
+                        point = 0;
+                        document.getElementById('score').style.color = "white";
+                        document.getElementById('score').innerHTML = point;
+                    }
+                // Om den åker får långt åt vänster
+                } else if(xMan == 0) {
+                    vxMan = vxMan - vxMan - vxMan;
+                    xMan = 100;
+                    if(pointWS < 1) {
+                        pointWS = pointWS - 1;
+                        document.getElementById('scoreWS').style.color = "white";
+                        document.getElementById('scoreWS').innerHTML = pointWS;
+                    } else {
+                        pointWS = 0;
+                        document.getElementById('scoreWS').style.color = "white";
+                        document.getElementById('scoreWS').innerHTML = pointWS;
+                    }
+                }
+            } 
+            } else {
+                hard = prompt("Skriv ett nummer mellan 1 och 20")
+            }
+            // Kallar på repaint 50 ggr i sekunden
+            window.setInterval(repaint, hard);
+
+        </script>
+            
+            <a style="text-decoration: none; font-family: Brush Script MT, cursive; font-size: 30px; position:relative; top: -130px;" href="homework.html"><h1 style="color: white;">Go back</h1></a>
+        </center>
+        
+        
+    </body>
+</html>
