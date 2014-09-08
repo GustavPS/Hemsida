@@ -9,7 +9,7 @@
         <center>
         <h1 style="color: white; font-family: Brush Script MT, cursive; font-size: 50px; position:relative; top: -150px;">Ping Pong</h1>
         <canvas style="cursor: none; border: 1px solid black; position:relative; top: -150px; background-color: white;" id="duk" width="500" height="400" onmousemove="mouseHandler(event)"></canvas>
-        <script>
+        <script>    
             var c = document.getElementById("duk");
             var ctx = c.getContext("2d");
             var xMan = 100, yMan = 200, vxMan = 2, vyMan = 3;
@@ -145,6 +145,7 @@
             }
             // Kallar på repaint 50 ggr i sekunden
             window.setInterval(repaint, hard);
+                
 
         </script>
             
