@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="sv">
+    <head>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>Vezel HF™</title>
         <script>
         function hide() {
             
-            document.getElementById("tab1").style.display = 'none';
-            document.getElementById("tab2").style.display = 'none';
-            document.getElementById("tab3").style.display = 'none';
-            document.getElementById("tab4").style.display = 'none';
+            const tabs = document.querySelectorAll(".tab");  
+
+            tabs.forEach( (tab) => {
+              tab.style.display = "none";
+            });
             
         } function show(h1) {
             hide();
@@ -42,25 +45,25 @@
                 <div class="Tab_4"><h3 class="Navigation" onclick="show('tab4')">Tab 4</h3></div>
             </center>
         </div>
-            <div id="tab1" style="margin-top: -25%;">
+            <div class="tab1" style="margin-top: -25%;">
                 <h2 id="Sub_title">About Me:</h2>
                     <div id="Text_Box_1">
                         
                     </div>
             </div>
-            <div id="tab2">
+            <div class="tab2">
                 <h2 id="Sub_title">Tab 2:</h2>
                 <div id="Text_Box_1">
                     
                 </div>
             </div>
-            <div id="tab3">
+            <div class="tab3">
                 <h2 id="Sub_title">Tab 3:</h2>
                 <div id="Text_Box_1">
                 
                 </div>
             </div>
-            <div id="tab4">
+            <div class="tab4">
                 <h2 id="Sub_title">Tab 4:</h2>
                 <div id="Text_Box_1">
                 
